@@ -10,4 +10,10 @@ describe("Sumar", () => {
 
     expect(resultado).toEqual("No se puede ingresar un post sin texto");
   });
+
+  it("Deberia contar la cantidad de ocurrencias de una palabra", () => {
+    const resultado = publi.contarCantOcurre("Hola hola");
+
+    expect(resultado).toEqual(["Hola","hola"]);
+  });
 });

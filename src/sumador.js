@@ -6,22 +6,30 @@ class Publicacion{
        {
          respuesta= "No se puede ingresar un post sin texto"
        }
-      //  else
-      //  {
-      //     if(codigoAAdivinar.length>=4 && codigoAAdivinar.length<=6)
-      //     {
-      //          this._codigoSecreto=codigoAAdivinar;
-      //          respuesta= this._codigoSecreto;
-      //     } 
-      //     else 
-      //     {
-      //       respuesta= "El codigo a adivinar debe ser mayor a 4 y menor a 6 digitos";
-      //     }
-      //  }
-
-       return respuesta;
-        
+       return respuesta;   
     }
+    contarCantOcurre(texto){
+      if(texto=="")
+    {
+      return 0;
+    }
+    let numeros=texto.split(new RegExp(''));
+    let total=0;
+    for(let ind = 0;ind < numeros.length; ind++){
+      total+=this.sumarSiEsNumero(numeros[ind]);
+    }
+    return total;
+    }
+    sumarSiSeRepite(palabra){
+      let suma=0;
+      if(!isNaN(palabra)){
+        if(palabra==texto.numeros){
+          suma= parseInt(palabra);
+        }
+      }
+      return suma;
+    } 
+  
 }
 
 export default Publicacion;
