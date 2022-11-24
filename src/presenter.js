@@ -10,4 +10,13 @@ form.addEventListener("submit", (event) => {
   const firstNumber = first.value;
 
   div.innerHTML = div.innerHTML + "<p> - " +firstNumber + "</p>";
+  if(firstNumber!="")
+  {
+    div.innerHTML = div.innerHTML + "<p> - " +firstNumber + "</p>";
+  }
+  else
+  {
+    const mensaje = "No se puede ingresar un post sin texto";
+    alert(mensaje);
+  }
 });

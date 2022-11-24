@@ -1,7 +1,13 @@
-import sumar from "./sumador.js";
+import Publicacion from "./sumador.js";
 
 describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+  let publi;
+  beforeEach(()=> {
+    publi = new Publicacion
+  });
+  it("No deberia publicar si esta vacio", () => {
+    const resultado = publi.guardarPublicacion("");
+
+    expect(resultado).toEqual("No se puede ingresar un post sin texto");
   });
 });
